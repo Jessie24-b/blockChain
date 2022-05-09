@@ -1,0 +1,10 @@
+
+.formLogin{
+    margin-top: 200px;
+}
+
+.fondoLogin{
+    background-image: url("https://www.igeoapp.com/sso/img/fondos/fondo_login_erp_2.jpg");
+    background-size: cover;
+    height: 670px;
+}
