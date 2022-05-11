@@ -1,6 +1,40 @@
 import React, { Component } from 'react'
-
+import service from '../services/loginService'
 class login extends Component {
+
+    state={
+        form: {
+            session: '',
+            contrasena: ''
+        }
+    }
+
+
+
+    componentDidMount() {
+
+    }
+
+    handleChange = async  e=>{
+        e.persist();
+        await this.setState({
+            form: {
+            ...this.state.form,
+            [e.target.name]: e.target.value
+            }
+        });
+        console.log(this.state.form)
+    }
+
+
+    onSubmit = e =>{
+        e.preventDefault();
+        service.getUsers().them((res ) =>{
+            this.state.form
+        });
+       
+    }
+
     render() {
         return (
             <div class="fondoLogin">
@@ -13,22 +47,26 @@ class login extends Component {
                     </label>
                 </div>
                 <div className='col-6  align-items-center' >
-                    <form class="formLogin " >
+                    <form class="formLogin "  onSubmit={this.onSubmit}>
                         <h3>Inicio de sesión</h3>
                         <div className="mb-3">
-                            <label className='text-white'>Correo electrónico</label>
+                            <label className='text-white'>usuario</label>
                             <input
-                                type="email"
+                                type="text"
                                 className="form-control"
+                                name='session'
                                 placeholder="Ingrese el correo"
+                                onChange={this.handleChange}
                             />
                         </div>
                         <div className="mb-3">
                             <label className='text-white'>Contraseña</label>
                             <input
                                 type="password"
+                                name='contrasena'
                                 className="form-control"
                                 placeholder="Ingrese la contraseña"
+                                onChange={this.handleChange}
                             />
                         </div>
                         <div className="mb-3">
@@ -46,6 +84,7 @@ class login extends Component {
                         <div className="d-grid">
                             <button type="submit" className="btn btn-primary">
                                 Submit
+
                             </button>
                         </div>
                         <p className="forgot-password text-right">
