@@ -13,8 +13,8 @@ function App() {
 
       
       <Navbar/>
-        {/* <Login/> */}
-        <FormRegister/>
+        <Login/>
+        {/* <FormRegister/> */}
       
 
     </div>

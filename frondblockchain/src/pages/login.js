@@ -29,11 +29,15 @@ class login extends Component {
 
     onSubmit = e =>{
         e.preventDefault();
-        service.getUsers().them((res ) =>{
-            this.state.form
-        });
+        // // service.getUsers().them((res ) =>{
+        // //     this.state.form
+        // });
+
+        //navegacion 
        
     }
+
+
 
     render() {
         return (
