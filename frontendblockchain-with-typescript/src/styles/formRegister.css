@@ -1,0 +1,28 @@
+.container{
+    margin-top: 60px;
+    margin: 80px;
+    padding-top: 5%;
+    background-color: #E8E7E7;
+}
+.btn{
+    /* margin: 50px; */
+    /* margin-right: 1000px; */
+    margin-left: 100px;
+    margin-bottom: 50px;
+    
+}
+.row{
+    padding: 10px;
+}
+.form input{
+    /* border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    border-radius: 0px; */
+    outline: 0px;
+    
+}
+.inputLabel{
+
+    border-bottom: 1px solid black;
+}
