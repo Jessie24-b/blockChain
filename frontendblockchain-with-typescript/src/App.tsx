@@ -4,13 +4,12 @@ import './styles/formRegister.css';
 import './js/validationForm';
 import './App.css';
 import Login from './components/loginComponent'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
        <Login/>
-     
-   
   );
 }
 
