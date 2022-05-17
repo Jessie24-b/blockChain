@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {User} from '../types'
 import getUsers from '../service/loginService'
+import { Link } from "react-router-dom"
 
 interface LoginState {
     inputValues: User 
@@ -46,7 +47,7 @@ export default function Login()
             <input type="password" onChange={handleChange} name="password" placeholder="Ingrese su contraseña"/>
             <input type="submit" value="Ingresar"/>
             <a href="#">Olvidó su contraseña?</a><br/>
-            <a href="#">No tienes una cuenta aún?</a>          
+            <Link to="/Register">No tienes una cuenta aún?</Link>          
             </form>     
             </div>
         )    
